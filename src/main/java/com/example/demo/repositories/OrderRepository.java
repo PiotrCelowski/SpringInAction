@@ -3,6 +3,8 @@ package com.example.demo.repositories;
 import com.example.demo.domain.TacoOrder;
 import org.springframework.data.repository.CrudRepository;
 
+import java.util.List;
+
 public interface OrderRepository extends CrudRepository<TacoOrder, Long> {
-    TacoOrder save(TacoOrder order);
+    List<TacoOrder> findByDeliveryZip(String deliveryZip);
 }
