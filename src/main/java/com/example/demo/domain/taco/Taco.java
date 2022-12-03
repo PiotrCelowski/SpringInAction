@@ -1,4 +1,4 @@
-package com.example.demo.domain;
+package com.example.demo.domain.taco;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;

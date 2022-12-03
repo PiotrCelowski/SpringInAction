@@ -1,8 +1,8 @@
 package com.example.demo.controllers;
 
-import com.example.demo.domain.Ingredient;
-import com.example.demo.domain.Taco;
-import com.example.demo.domain.TacoOrder;
+import com.example.demo.domain.taco.Ingredient;
+import com.example.demo.domain.taco.Taco;
+import com.example.demo.domain.taco.TacoOrder;
 import com.example.demo.repositories.IngredientRepository;
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static com.example.demo.domain.Ingredient.*;
+import static com.example.demo.domain.taco.Ingredient.*;
 
 @Slf4j
 @Controller
@@ -48,6 +48,7 @@ public class DesignTacoController {
     public Taco taco() {
         return new Taco();
     }
+
     @GetMapping
     public String showDesignForm() {
         return "design";

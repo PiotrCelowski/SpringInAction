@@ -1,6 +1,6 @@
 package com.example.demo.converters;
 
-import com.example.demo.domain.Ingredient;
+import com.example.demo.domain.taco.Ingredient;
 import com.example.demo.repositories.IngredientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.converter.Converter;

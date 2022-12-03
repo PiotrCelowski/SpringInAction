@@ -1,6 +1,6 @@
 package com.example.demo.web.config;
 
-import com.example.demo.domain.Ingredient;
+import com.example.demo.domain.taco.Ingredient;
 import com.example.demo.repositories.IngredientRepository;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.context.annotation.Bean;
@@ -13,6 +13,7 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
         registry.addViewController("/").setViewName("home");
+        registry.addViewController("/login");
     }
 
     @Bean
