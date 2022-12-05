@@ -1,6 +1,7 @@
 package com.example.demo.controllers;
 
 import com.example.demo.domain.Taco;
+import com.example.demo.domain.TacoOrder;
 import com.example.demo.repositories.TacoRepository;
 import com.example.demo.web.props.OrderProps;
 import org.springframework.data.domain.PageRequest;
@@ -41,4 +42,11 @@ public class TacoController {
         }
         return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
     }
+
+    @PostMapping(consumes="application/json")
+    @ResponseStatus(HttpStatus.CREATED)
+    public Taco postTaco(@RequestBody Taco taco) {
+        return tacoRepo.save(taco);
+    }
+
 }
