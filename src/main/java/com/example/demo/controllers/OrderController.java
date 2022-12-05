@@ -1,6 +1,6 @@
 package com.example.demo.controllers;
 
-import com.example.demo.domain.taco.TacoOrder;
+import com.example.demo.domain.TacoOrder;
 import com.example.demo.repositories.OrderRepository;
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;

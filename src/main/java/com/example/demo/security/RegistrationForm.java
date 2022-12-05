@@ -1,6 +1,5 @@
 package com.example.demo.security;
 
-import com.example.demo.domain.users.TacoUser;
 import lombok.Data;
 import org.springframework.security.crypto.password.PasswordEncoder;
 

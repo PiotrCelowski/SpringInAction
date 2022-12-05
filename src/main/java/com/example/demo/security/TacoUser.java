@@ -1,4 +1,4 @@
-package com.example.demo.domain.users;
+package com.example.demo.security;
 
 import jakarta.persistence.*;
 import lombok.AccessLevel;

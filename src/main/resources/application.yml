@@ -7,3 +7,7 @@ spring:
     username: sa
     password: password
     driverClassName: org.h2.Driver
+taco:
+  orders:
+    page: 0
+    pageSize: 20

@@ -1,6 +1,6 @@
 package com.example.demo.repositories;
 
-import com.example.demo.domain.taco.Ingredient;
+import com.example.demo.domain.Ingredient;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
