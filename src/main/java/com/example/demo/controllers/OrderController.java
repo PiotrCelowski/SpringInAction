@@ -4,6 +4,8 @@ import com.example.demo.domain.TacoOrder;
 import com.example.demo.repositories.OrderRepository;
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
@@ -76,6 +78,14 @@ public class OrderController {
             order.setCcCVV(patch.getCcCVV());
         }
         return orderRepo.save(order);
+    }
+
+    @DeleteMapping("/{orderId}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void deleteOrder(@PathVariable("orderId") Long orderId) {
+        try {
+            orderRepo.deleteById(orderId);
+        } catch (EmptyResultDataAccessException e) {}
     }
 
 }
